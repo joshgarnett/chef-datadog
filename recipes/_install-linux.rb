@@ -41,6 +41,7 @@ else
   # Install the regular package
   package 'datadog-agent' do
     version dd_agent_version
+    flush_cache [:before]
     action node['datadog']['agent_package_action'] # default is :install
   end
 end
